@@ -3,8 +3,13 @@ extends Node
 # random numbers
 
 func _ready():
-	var roll = randf()
-	if roll <= 0.8:
-		print("dapat item biasa")
-	else:
-		print("dapat rare item")
+	
+	# random number yang ada min dan max value
+	
+	# return float
+	var character_height = randf_range(140,210)
+	print("tinggi char = "+ str(character_height))
+	
+	# return int
+	var char_height_int = randi_range(140,210)
+	print("tinggi char = "+ str(char_height_int))
