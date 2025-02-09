@@ -1,11 +1,10 @@
 extends Node
 
-# function
+# random numbers
 
 func _ready():
-	print(add(1,2))
-	
-	
-func add(num1,num2) -> int:
-	var result = num1 + num2
-	return result
+	var roll = randf()
+	if roll <= 0.8:
+		print("dapat item biasa")
+	else:
+		print("dapat rare item")
