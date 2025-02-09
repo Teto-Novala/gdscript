@@ -1,10 +1,14 @@
 extends Node
 
-# variabel constant
-const GRAVITY = -9.81
+# function
+# func yang di awali dengan _ bakal langsung dpanggil ama enginenya
+# contohnya func _ready dan _input
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	GRAVITY = 78
-	# bakal error klo dganti
+func jump():
+	 # code buat lompat
+	print("jump")
+	
+func _input(event):
+	if event.is_action_pressed("my_action"):
+		jump()
 	
