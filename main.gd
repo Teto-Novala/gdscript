@@ -1,14 +1,11 @@
 extends Node
 
 # function
-# func yang di awali dengan _ bakal langsung dpanggil ama enginenya
-# contohnya func _ready dan _input
 
-func jump():
-	 # code buat lompat
-	print("jump")
+func _ready():
+	add(3,4)
 	
-func _input(event):
-	if event.is_action_pressed("my_action"):
-		jump()
 	
+func add(num1,num2):
+	var result = num1 + num2
+	print(result)
