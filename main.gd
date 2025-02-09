@@ -1,10 +1,10 @@
 extends Node
 
-# export
-# ngasih export bakal ngasih akses ke Node inspector
-@export var def := 15
+# variabel constant
+const GRAVITY = -9.81
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	GRAVITY = 78
+	# bakal error klo dganti
 	
