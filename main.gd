@@ -1,15 +1,22 @@
 extends Node
 
-# random numbers
+# array
 
 func _ready():
+	# mixing array
+	var items = ["Potion",3,6]
 	
-	# random number yang ada min dan max value
+	# declare type array
+	var decArray: Array[String] = ['sdff','sdfasfd','sdfasdf']
 	
-	# return float
-	var character_height = randf_range(140,210)
-	print("tinggi char = "+ str(character_height))
+	# akses array
+	print(items[0])
+	print(decArray[1])
 	
-	# return int
-	var char_height_int = randi_range(140,210)
-	print("tinggi char = "+ str(char_height_int))
+	# hapus array
+	items.remove_at(0)
+	
+	# tambah array
+	decArray.append("tambah")
+	print(items)
+	print(decArray)
