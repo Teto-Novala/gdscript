@@ -1,18 +1,17 @@
 extends Node
 
-# enum
+# match
 
-enum Alignment { ALLY=1, NEUTRAL=0, ENEMY=5}
+enum Alignment { ALLY, NEUTRAL, ENEMY}
 
 # var unit_alignment = Alignment.ALLY
 @export var unit_alignment : Alignment
 
 func _ready():
-	if unit_alignment == Alignment.ENEMY:
-		print("You are not welcome")
-	else:
-		print("Welcome.")
-	
-	# isi dari enum itu index
-	# bisa di custom
-	print(Alignment.ENEMY)
+	match unit_alignment:
+		Alignment.ALLY:
+			print("Hello")
+		Alignment.NEUTRAL:
+			print("Peace")
+		Alignment.ENEMY:
+			print("KIILLLLL")
