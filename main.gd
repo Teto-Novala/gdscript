@@ -1,10 +1,23 @@
 extends Node
 
-# modifying node
-@onready var label: Label = $Label
+# signal
 
-@export var my_node:Sprite2D
+signal leveled_up(msg)
+
+var xp := 0
 
 func _ready():
-	if my_node is Node2D:
-		print("2D")
+	leveled_up.connect(_on_leveled_up)
+	#leveled_up.disconnect(_on_leveled_up)
+
+
+func _on_timer_timeout() -> void:
+	xp +=5
+	print(xp)
+	if xp >= 20:
+		xp = 0
+		leveled_up.emit("LEvellll")
+
+
+func _on_leveled_up(msg) -> void:
+	print(msg)
