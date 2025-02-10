@@ -1,17 +1,10 @@
 extends Node
 
-# match
+# modifying node
+@onready var label: Label = $Label
 
-enum Alignment { ALLY, NEUTRAL, ENEMY}
-
-# var unit_alignment = Alignment.ALLY
-@export var unit_alignment : Alignment
+@export var my_node:Sprite2D
 
 func _ready():
-	match unit_alignment:
-		Alignment.ALLY:
-			print("Hello")
-		Alignment.NEUTRAL:
-			print("Peace")
-		Alignment.ENEMY:
-			print("KIILLLLL")
+	if my_node is Node2D:
+		print("2D")
