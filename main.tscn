@@ -1,11 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://bak8nag3jxhlj"]
+[gd_scene load_steps=3 format=3 uid="uid://bak8nag3jxhlj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_vsldx"]
+[ext_resource type="Script" path="res://character.gd" id="2_tmv4v"]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" node_paths=PackedStringArray("character_to_kill")]
 script = ExtResource("1_vsldx")
+character_to_kill = NodePath("Character")
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
+[node name="Character" type="Node" parent="."]
+script = ExtResource("2_tmv4v")
+profession = "Potion seller"
+health = 40
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Character2" type="Node" parent="."]
+script = ExtResource("2_tmv4v")
+profession = "Ex-adventurer"
+health = 30
+
+[node name="Character3" type="Node" parent="."]
+script = ExtResource("2_tmv4v")
+profession = "Knight"
+health = 150
