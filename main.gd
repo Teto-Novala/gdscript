@@ -1,9 +1,8 @@
 extends Node
 
-# classes
+# inner class
 
-@export var character_to_kill: Character
 
 func _ready():
-	character_to_kill.die()
+	pass
 	
