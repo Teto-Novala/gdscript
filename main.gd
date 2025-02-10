@@ -1,22 +1,21 @@
 extends Node
 
-# array
+# loop
 
 func _ready():
 	# mixing array
-	var items = ["Potion",3,6]
+	var items = ["Potion","sdfgsadfgg","dasdfgg"]
 	
-	# declare type array
-	var decArray: Array[String] = ['sdff','sdfasfd','sdfasdf']
+	for item in items:
+		if item.length() > 4:
+			print(item)
+			
+	var glass := 0.0
+	while glass < 0.4:
+		glass += 0.1
+		print(glass)
+		if glass > 0.2:
+			break
+		else:
+			continue
 	
-	# akses array
-	print(items[0])
-	print(decArray[1])
-	
-	# hapus array
-	items.remove_at(0)
-	
-	# tambah array
-	decArray.append("tambah")
-	print(items)
-	print(decArray)
